@@ -13,7 +13,7 @@ import ixa.kaflib.KAFDocument;
 public class SRL {
 
 	public static void main(String[] args) { // throws IOException {
-
+                System.err.println("Timestamp EHU-srl start in-command: " + System.currentTimeMillis());
 		try {
 			Annotate annotator = new Annotate();
 			// Input
@@ -52,6 +52,7 @@ public class SRL {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
+                System.err.println("Timestamp EHU-srl end in-command: " + System.currentTimeMillis());
 	}
 
 }

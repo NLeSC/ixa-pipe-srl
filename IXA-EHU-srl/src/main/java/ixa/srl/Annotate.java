@@ -63,13 +63,16 @@ public class Annotate {
 			}
 		}));
 
+                System.err.println("Timestamp EHU-srl start translate2mate: " + System.currentTimeMillis());
 		HashMap<String, String> annotationlines = KAF2MateTerms(kaf);
 		if (option.equals("only-srl")) {
 			annotationlines = KAF2MateDeps(annotationlines, kaf, kaflang);
 		}
 		List<String> annotation = KAF2Mate(annotationlines, kaf);
+                System.err.println("Timestamp EHU-srl start work: " + System.currentTimeMillis());
 
 		Document response = annotate(annotation, lang, option);
+                System.err.println("Timestamp EHU-srl end work: " + System.currentTimeMillis());
 
 		System.setOut(printStreamOriginal);
 

@@ -229,7 +229,9 @@ public class MatePipeline {
 		// System.exit(1);
 		// }
 
+                System.err.println("Timestamp EHU-srl start buildmatepipeline: " + System.currentTimeMillis());
 		MatePipeline pipeline = getCompletePipeline(options, option);
+                System.err.println("Timestamp EHU-srl start runmatepipeline: " + System.currentTimeMillis());
 		doc = parseCoNLL09(options, option, pipeline, annotation);
 
 		return doc;

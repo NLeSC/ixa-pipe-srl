@@ -4,7 +4,7 @@
 
   <groupId>ixa.srl</groupId>
   <artifactId>IXA-EHU-srl</artifactId>
-  <version>1.0</version>
+  <version>1.0-timed</version>
   <packaging>jar</packaging>
 
   <name>IXA-EHU-srl</name>
