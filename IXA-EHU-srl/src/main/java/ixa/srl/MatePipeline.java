@@ -229,10 +229,12 @@ public class MatePipeline {
 		// System.exit(1);
 		// }
 
-                System.err.println("Timestamp EHU-srl start buildmatepipeline: " + System.currentTimeMillis());
+                System.err.println("Timestamp EHU-srl start setup: " + System.currentTimeMillis());
 		MatePipeline pipeline = getCompletePipeline(options, option);
-                System.err.println("Timestamp EHU-srl start runmatepipeline: " + System.currentTimeMillis());
+                System.err.println("Timestamp EHU-srl end setup: " + System.currentTimeMillis());
+                System.err.println("Timestamp EHU-srl start work: " + System.currentTimeMillis());
 		doc = parseCoNLL09(options, option, pipeline, annotation);
+                System.err.println("Timestamp EHU-srl end work: " + System.currentTimeMillis());
 
 		return doc;
 	}
